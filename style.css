@@ -1,1 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.cabecalho{
+    border: 1px solid black;
+    display: grid;
+    /* grid-template-rows: 10vh; */
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.botao-cabecalho{
+    justify-self: end;
+}
+/* Um ponto muito importante pra falar sobre a criação desta classe. Criamos ela dentro da segunda tag section dentro do header, onde fizemos inicialmente a classe cabeçalho. Não criamos a classe dentro da tag button, pois button não é filho do header, mas section é, então pra fazermos uma alteração específica no botão, que foi inicialmente configurtado pela classe cabeçalho, tivemos que criar essa classe botão-cabecalho pra que o recurso de alteração justify-self funcionasse. Esse caso ajubou bastante a deixar mais claro como interpretar essa relação de pai e filho no CSS. */
+
+.rodape{
+    border: 1px solid black;
+    /* height: 10vh; */
+    padding: 0 16px;
+    display: grid;
+    align-items: center;
+}
+
+.container-principal{
+    display: grid;
+    grid-template: 10vh 80vh 10vh / auto; 
+}
+/* Depois da barra, que indica a quantidade de coluna que queremos, a Ana resolveu colocar o auto, mas poderia ser também 1fr (uma fração), ou então como testamos, poderia ser 100% também. Coloquei 100vh mas a tela ficou pela metade, não entendi porque. */
+
+.container-conteudo{
+    display: grid;
+    grid-template: 1fr / 1fr 2fr 1fr ;
+}
+/* Aqui essa classe criamos ela na main, lançamos uma linha, e depois da barra demos o espaço de uma fração para as colunas laterais, e demos o dobro de espaço (2fr) para a coluna do meio. */
+
+.content-container{
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    padding: 16px;
+}
+
+.conteudo-lateral{
+    padding: 16px;
+}
+
+
+
 
