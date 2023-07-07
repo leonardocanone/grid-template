@@ -1,0 +1,66 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.cabecalho{
+    border: 1px solid black;
+    display: grid;
+    /* grid-template-rows: 10vh; */
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    padding: 0 16px;
+}
+
+.botao-cabecalho{
+    justify-self: end;
+}
+
+.rodape{
+    border: 1px solid black;
+    /* height: 10vh; */
+    padding: 0 16px;
+    display: grid;
+    align-items: center;
+}
+
+.container-principal{
+    display: grid;
+    /* grid-template: 10vh 80vh 10vh / auto; */
+    grid-template: 10vh auto 10vh / auto; 
+}
+
+/* .container-conteudo{
+    display: grid;
+    grid-template: 1fr / 1fr 2fr 1fr ;
+} */
+
+.content-container{
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+    padding: 16px;
+}
+
+/* .conteudo-lateral{
+    padding: 16px;
+} */
+
+.gallery{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, 152px);
+    gap: 15px;
+    min-height: 77vh;
+    padding: 9px;
+}
+
+figure{
+    border: 1px solid black;
+    height: 30vh;
+}
+
+/* Vou tentar escrever aqui como a Ana resolveu o exercício de fixação. Primeira coisa básica que eu mesmo já tinha feito foi chamar a classe gallery, e criar um display: grid. No exercício de Flex que foi praticamente o mesmo, utilizamos o flex wrap para gerar responsividade ao site, no entanto o Grid não tem um recurso como flex wrap, e a solução foi a seguinte. A Ana nem chegou a criar uma linha, ela chamou apenas o grid-template-columns, no entanto aqui ela usou o recurso repeat(), que basicamente diz entre os parentesis primeiro a quantidade de colunas que a gente quer, e após a vírgula dizemos o tamanho ou a fração dela que desejamos. Em vez de digitar 1fr 1fr 1fr 1fr quatro vezes seguidas, com o repeat o código ficaria basicamente assim: repeat(4, 1fr). Ocorre que aqui ela utilizou no lugar da quantidade de colunas o recurso auto-fit, que poderia ser também o auto-fill, onde dizemos pro computador pra ele posicionar as imagens em colunas o quanto couber na página, passando também a medida da imagem (a Ana colocou 150px, mas fiz um ajuste fino pra 152px pois criei uma borda p/ a tag figure, e fficou melhor assim), e as imagens que inicialmente estavam as 8 na vertical, uma em cima da outra com suas respectivas legendas, agora ficaram lado a lado na horizontal, ocupando todo o espaço que tinham na página. Depois disso ela colocou um gap de 20px(no final ajustei pra 15px) pra dar um espaço entre os elementos, e por fim, uma coisa absolutamente importante, foi colocar o min-height, cuja explicação falaremos abaixo.
+
+Na aula de Flex, quando utilizamos o flex wrap, reparei que ao diminuir o tamanho da tela pra testar a responsividade do site do exercício de fixação, a imagens invadiram o footer, e hoje entendi que isso ocorre pois o tamanho da tela no código estava fixo. Nesse exercício hoje de Grid, pra corrigir esse problema, a Ana utilizou o min-height, que diz o seguinte pro PC, o mínimo de espaço da tela deve ser 80vh, ou seja, não pode ser menor do que isso, entretanto pode sim ser maior, e quando a gente esmaga a página até o limite máximo lateralmente, a altura da página se torna flexível, e posiciona as últimas imagens lá no final do site sem que o footer seja invadido, pois a página se ajustou automaticamente. Um ponto super importante pra que isso tenha funcionado, foi também tirar o 80vh lá da classe .container-principal e colocar um auto no lugar, caso não fizesse isso esse 80vh continuaria prevalecendo no código, anulando esse efeito de flexibilidade trazido pelo min-height que acabamos de explicar.
+Deixei inclusive grid-template comentado na classe .container-principal, pra mostrar como estava antes desse ajuste final. Último comentário, como coloquei um padding de 9px na classe gallery, empurrei um pouco o footer pra baixo, então ajustei o min-height pra 77 pra deixar perfeito. */
+
+
